@@ -26,6 +26,7 @@ app.post('/', (req, res) => {
 
   console.log('x-hub-signature-256:', req.headers['x-hub-signature-256']);
   console.log('Raw body:', req.rawBody);
+  console.log('Body:', JSON.stringify(req.body, null, 2));
 
   res.status(200).end();
 });
